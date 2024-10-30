@@ -223,11 +223,18 @@ main > section{
 
 /* STARTING SECTION STYLES */
 #starting div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
     /* TO DO: Use flexbox to adjust the display of this div: content should wrap, justify with space between the elements, and include a gap of 16 pixels */
     
 }
 
 #starting section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     /* TO DO: Use flexbox to adjust the display of this section. Contents should display in a column, do not need to wrap, and should have a gap of 1rem between the items */
     
     max-width: 525px;
@@ -235,6 +242,7 @@ main > section{
 }
 
 #starting img{
+    order: -1;
     /* TO DO: Use the order property to adjust the display in the sections here so that the images appear before the heading */
 	
 }
@@ -251,6 +259,10 @@ main > section{
 }
 
 #more-flex div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
     /* TO DO: Use flexbox to adjust the display of this div. The items should be allowed to wrap, they should be center justified, and should have a gap of 1rem */
 	
 }
@@ -291,6 +303,10 @@ button:focus{
 
 /* BOXES SECTION STYLES */
 #boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
     /* TO DO: Adjust the display in this section using flexbox. The items should be able to wrap, they should be justified with even space, and there should be a gap of 1rem */
 	
 	padding-top: 1rem;
@@ -303,6 +319,9 @@ button:focus{
 	border-radius: 8px;
 	box-shadow: var(--box-shadow-sm);
 	text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* TO DO: Adjust the display of the individual divs in the boxes section so that the elements inside of them will will display centered both horizontally and vertically */
 	
 }
@@ -346,13 +365,18 @@ button:focus{
 	background-color: var(--wht);
 	border-radius: 8px;
 	box-shadow: var(--box-shadow-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     /* TO DO: Adjust the display of the content in the modal (popup) uses flexbox to display in a single column with a 0.5rem gap between the items */
 	
 }
 
 #modal{
     /* TO DO: Adjust the layout of the div that will dim the page when the background is open so that when the modal is open it will be centered horizontally and vertically on the page */
-	
+	display: flex;
+    justify-content: center;
+    align-items: center;
 	position: fixed;
 	z-index: 3;
 	left: 0;
@@ -373,6 +397,7 @@ button:focus{
 	margin: 0;
 	box-shadow: none;
 	background-color: transparent;
+    align-self: end;
     /* TO DO: Adjust the display of the button used to close the modal so that is is aligned to the upper right corner of the modal */
 }
 
@@ -397,6 +422,9 @@ button:focus{
 
 @media screen and (min-width: 375px){
     nav ul{
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
         /* TO DO: Use flexbox to adjust the display of the navigation in this media query so that the elements have 1 rem of space between them and are justified with space between the elements */
 
         max-width: 650px;
@@ -404,6 +432,7 @@ button:focus{
     }
 
     nav li{
+        flex-grow: 1;
         /* TO DO: Use the flex grow property to allow the nav list items to be larger in their container when there is more space */
         
     }
@@ -411,6 +440,9 @@ button:focus{
 
 @media screen and (min-width: 875px){
     header{
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
         /* TO DO: Use flexbox to adjust the display of the header at wider screen widths with space between the elements and a gap of 32 pixels */
         
         padding: 2rem;
